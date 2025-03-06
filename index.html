@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Proyecto</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-    <style>
+    <style> 
+
         body {
-            font-family: 'Outfit', Arial, sans-serif;
+           font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: transparent;
-            background-image: url('vango.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            position: relative;
-        }
-        .sidebar {
+    padding: 0;
+    background-color: transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+         }
+
+
+
+        .sidebar { 
             width: 250px;
             overflow-y: auto; 
             max-height: 100vh; 
@@ -31,10 +36,10 @@
             flex-grow: 1;
             padding: 20px;
         }
-        h1.titulo {
+        h1.titulo { 
             text-align: center;
-            font-size: 10em;
-            margin-bottom: 50px;
+            font-size: 5em;
+            margin-bottom: 20px;
             color: #ece57c;
             border-color:rgb(3, 3, 3); 
         }
@@ -46,9 +51,9 @@
         nav a {
             color: rgb(3, 3, 3);
             text-decoration: none;
-            margin: 15px 30px; 
+            margin: 5px 5px; 
             display: inline-block;
-            padding: 1em 2em;
+            padding: 1em 1em;
             border-radius: 10px;
             background: #ece57c;
             transition: 0.2s;
@@ -67,20 +72,11 @@
             transform: translate(0);
             box-shadow: none;
         }
+        
     </style>
 </head>
 <body>
-    <div class="sidebar">
-    <h2>¿Qué es un Proyecto de Vida?</h2>
-    <p>Importancia del Proyecto de Vida</p>
-    <p>Tener un proyecto de vida bien definido es fundamental para alcanzar el bienestar y la autorrealización. Sin un rumbo claro, las personas pueden sentirse perdidas o desmotivadas, mientras que al contar con una planificación adecuada, pueden orientar sus esfuerzos de manera estratégica y eficiente. Un proyecto de vida permite:</p>
-    <p>Tener claridad de objetivos: Definir lo que se quiere lograr a corto, mediano y largo plazo.</p>
-    <p>Desarrollar un propósito de vida: Encontrar un sentido a la existencia y actuar en función de ello.</p>
-    <p>Tomar decisiones acertadas: Facilita la toma de decisiones coherentes con las aspiraciones personales.</p>
-    <p>Manejar mejor los obstáculos: Al tener un rumbo definido, se pueden enfrentar mejor los desafíos.</p>
-    <p>Fomentar la perseverancia y motivación: Mantiene encendida la pasión por alcanzar las metas establecidas.</p>
-    <p>Elementos Claves de un Proyecto de Vida</p>
-    <p>Para construir un proyecto de vida sólido y bien estructurado, es necesario considerar varios elementos esenciales:</p>
+    
 </div>
     <div class="content">
         <h1 class="titulo"><strong>Proyecto de Vida</strong></h1>
@@ -102,4 +98,3 @@
         </nav>
     </div>
 </body>
-</html>

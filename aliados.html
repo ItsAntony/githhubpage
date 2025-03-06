@@ -34,28 +34,20 @@
             text-align: justify;
             font-weight: 700;
         }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
         .photo {
-            position: absolute;
             width: 150px; 
             height: 150px; 
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .photo1 { top: 10px; left: 10px; }
-        .photo2 { top: 100px; left: 200px; }
-        .photo3 { top: 200px; left: 400px; }
-        .photo4 { top: 300px; left: 600px; }
-        .photo5 { top: 400px; left: 100px; }
-        .photo6 { top: 500px; left: 300px; }
-        .photo7 { top: 600px; left: 500px; }
-        .photo8 { top: 50px; right: 100px; }
-        .photo9 { top: 150px; right: 200px; }
-        .photo10 { top: 250px; right: 400px; }
-        .photo11 { top: 350px; right: 600px; }
-        .photo12 { top: 450px; right: 100px; }
-        .photo13 { top: 550px; right: 300px; }
-        .photo14 { top: 650px; right: 500px; }
     </style>
 </head>
 <body>
@@ -65,8 +57,8 @@
         <h2><strong>Laboral</strong></h2>
         <li>Mi Padre</li>
         <li>Mi Madre</li>
-        <li>Mis Tios</li>
-        <h2><strong>Academico</strong></h2>
+        <li>Mis Tíos</li>
+        <h2><strong>Académico</strong></h2>
         <li>Mis Padres</li>
         <li>Mis Maestros</li>
         <li>Mis Amigos</li>
@@ -74,13 +66,13 @@
         <li>Dios</li>
         <li>Mi Familia</li>
         <li>Mi Mejor Amigo</li>
-        <h2>Fisico</h2>
+        <h2>Físico</h2>
         <li>Dios</li>
         <li>Mis Gym Bros</li>
         <li>Mi Familia</li>
         <h2>Familiar</h2>
         <li>Mi Madre</li>
-        <li>Mi Tia</li>
+        <li>Mi Tía</li>
         <li>Mi Padrastro</li>
         <h2>Emocional</h2>
         <li>Dios</li>
@@ -90,25 +82,27 @@
         <li>Mi Pareja Sentimental</li>
         <li>Mis Gym Bros</li>
         <li>Mis Amigos</li>
-        <h2>Economico</h2>
+        <h2>Económico</h2>
         <li>Mi Madre</li>
-        <li>Mi Tia</li>
+        <li>Mi Tía</li>
         <li>Mi Abuela</li>
     </div>
     
-    <img src="GYMBROS.jpg" alt="Foto 1" class="photo photo1">
-    <img src="NAVIDAD.jpg" alt="Foto 2" class="photo photo2">
-    <img src="junta.jpg" alt="Foto 3" class="photo photo3">
-    <img src="cocazo.jpg" alt="Foto 4" class="photo photo4">
-    <img src="GYM2.jpg" alt="Foto 5" class="photo photo5">
-    <img src="HANSYJONA.jpg" alt="Foto 6" class="photo photo6">
-    <img src="MIMUJER.jpg" alt="Foto 7" class="photo photo7">
-    <img src="Metro.jpg" alt="Foto 8" class="photo photo8">
-    <img src="Hermanos.jpg" alt="Foto 9" class="photo photo9">
-    <img src="Zonaverde.jpg" alt="Foto 10" class="photo photo10">
-    <img src="KFC.jpg" alt="Foto 11" class="photo photo11">
-    <img src="ale.jpg" alt="Foto 12" class="photo photo12">
-    <img src="Dolar.jpg" alt="Foto 13" class="photo photo13">
-    <img src="stivi.jpg" alt="Foto 14" class="photo photo14">
+    <div class="photo-gallery">
+        <img src="GYMBROS.jpg" alt="Gym Bros" class="photo">
+        <img src="NAVIDAD.jpg" alt="Navidad" class="photo">
+        <img src="junta.jpg" alt="Junta" class="photo">
+        <img src="cocazo.jpg" alt="Cocazo" class="photo">
+        <img src="GYM2.jpg" alt="Gym 2" class="photo">
+        <img src="HANSYJONA.jpg" alt="Hans y Jona" class="photo">
+        <img src="MIMUJER.jpg" alt="Mi Mujer" class="photo">
+        <img src="Metro.jpg" alt="Metro" class="photo">
+        <img src="Hermanos.jpg" alt="Hermanos" class="photo">
+        <img src="Zonaverde.jpg" alt="Zona Verde" class="photo">
+        <img src="KFC.jpg" alt="KFC" class="photo">
+        <img src="ale.jpg" alt="Ale" class="photo">
+        <img src="Dolar.jpg" alt="Dólar" class="photo">
+        <img src="stivi.jpg" alt="Stivi" class="photo">
+    </div>
 </body>
 </html>
