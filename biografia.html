@@ -7,8 +7,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            background-image: url('vango.jpg');
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,10 +20,8 @@
             overflow-y: auto; /* Agrega una barra de desplazamiento vertical */
         }
         .container {
-            background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             max-width: 800px;
             opacity: 0.9;
@@ -35,7 +35,8 @@
             object-fit: cover;
         }
         h1 {
-            color: #333;
+            color: #ece57c; /* Color amarillo */
+            font-size: 3em; /* Tamaño de fuente más grande */
         }
         p {
             color: #666;
@@ -50,45 +51,114 @@
         .section {
             margin-bottom: 20px;
         }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #1b2467;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .event {
+            position: relative;
+            width: 45%;
+            padding: 20px;
+            background-color: #262c5c;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin: 20px 0;
+            color: #F8F9FA;
+            transition: transform 0.3s ease;
+        }
+        .event:hover {
+            transform: scale(1.05);
+        }
+        .event:nth-child(odd) {
+            left: 0;
+        }
+        .event:nth-child(even) {
+            left: 55%;
+        }
+        .event::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #1b2467;
+            border-radius: 50%;
+            top: 20px;
+            left: 100%;
+            transform: translateX(-50%);
+        }
+        .event:nth-child(even::before) {
+            left: 0;
+            transform: translateX(-50%);
+        }
+        .event .date {
+            font-weight: bold;
+            color: #FFD700; /* Cambia el color de la fecha a dorado */
+            margin-bottom: 10px;
+        }
+        .event p {
+            color: #FFFFFF; /* Cambia el color del texto a blanco */
+        }
+        .event img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <img src="YOXD2.jpg" alt="Foto de perfil">
-        <h1>Carlos Daniel Anonty Romeo Castañeda Gonzalez</h1>
-        <p><strong>Edad:</strong> 17 Años</p>
-        <p><strong>Ocupación:</strong> Actualmente cursando el grado de 5to bachillerato en computación con orientación en científica, y siendo contador para la empresa de mis tíos.</p>
-        <p><strong>Sobre mí:</strong> Un hijo de Dios, una persona que le tocó vivir solo en varios aspectos, alguien que le gusta apoyar y escuchar a las personas, divertido y chistoso.</p>
-        
-        <div class="section">
-            <h2>Infancia</h2>
-            <img src="bebe.jpg" alt="Foto de infancia">
-            <p>Claramente no recuerdo nada de mi infancia, solo que me encantaba ver las aventuras de Billy y Mandy. Mi mamá y mi abuela me cuentan que desde pequeño ya venían mis ganas de hacer ejercicio, ya que me cuentan que de pequeño me agarraban de la cintura y yo me ponía a saltar donde sea que estuviera.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Niñez</h2>
-            <img src="dereckhector.jpg" alt="Foto de niñez">
-            <p>Casi todas las personas tienen conciencia ya a estas edades, pero yo no recuerdo casi nada. Cuando tenía casi 4 años, mataron a mi padre biológico Aroldo Castañeda, quien no tomó las mejores decisiones. En todos mis años de estudio fui abanderado hasta 1ero básico. Me mantenía más tiempo con mi abuela y mi tía porque mi mamá trabajaba y no tenía tiempo para mí. Mi tía cuenta que nunca comía y me gastaba mi dinero en cartas de Pokémon.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Adolescencia</h2>
-            <img src="adolescencia.jpg" alt="Foto de adolescencia">
-            <p>(NO TENGO FOTOS) Esta claramente ya tenía conciencia y sinceramente esta parte de mi vida fue la peor. No tenía autoestima, me dejaba de todas las personas y siempre fui la burla de todos. Nunca me defendí porque sentía que era hacer las cosas mal y yo solo quería hacer sentir bien a todo el mundo. La humildad siempre estuvo, está y estará en mí, pero en esas etapas de mi vida fue lo peor. Tuve malas experiencias de todo: amistades, familiar y sentimental, pero no me arrepiento de nada porque gracias a eso soy quien soy. Pero fue horrible, jamás volvería a esta edad. "GORDO", "FEO", "DEFORME"...</p>
-        </div>
-        
-        <div class="section">
-            <h2>Juventud</h2>
-            <img src="yoXD3.jpg" alt="Foto de juventud">
-            <p>Pasó mucho tiempo para darme cuenta que soy una persona agradecida de todo lo que pasó en esta vida. Si no fuera por eso, no sería quien soy y no pensaría con la misma claridad que tengo ahora. He pasado muchas cosas, tanto buenas como malas, pero lo bueno se queda y lo malo solo se toma como "experiencia". Entré al gym, podría decir que llevo 1 año, ya dejé algunos meses pero mi progreso no se echó a perder. Sé que puedo mejorar, claramente tengo que hacerlo, tengo que superarme. Conocí a muchas personas en la vida y sé quiénes puedo llamar "amigos". Dereck Medina, mi mejor amigo desde que tengo aproximadamente 5 años, pasamos de todo juntos pero es alguien que siempre estará para mí. Todo lo pasamos juntos y como siempre nos confunden "¿ustedes son hermanos?".
-            Steven Zepeda, una persona que recién conocí el año pasado pero es mi hermano de verdad. Nunca había conocido a alguien tan parecido y no en aspectos físicos. El poco tiempo que ha pasado junto a mí me ha demostrado que es alguien que jamás me fallará. Se la pasa aconsejándome, apoyándome y dándome motivación en el gym. Te quiero mi hermanote. Hay muchísimas personas que llevo en mi corazón: Cristian Cuellar, Hector Galicia, Alejandro, Alexis, Adrian, todos son muy especiales, también como mis amigos actuales Hanssel, Dwight y Jonathan.
-            Tuve una mala experiencia con una persona en plan "amoroso" pero eso no era amor, y eso me quitó los ánimos o las ganas de conocer a alguien más, hasta hace un tiempo que conocí a Sara Guerra, la que actualmente es mi pareja sentimental. Sé que muchas personas pueden decir "el amor solo es una pérdida de tiempo", si es así, ¡qué pérdida de tiempo tan hermosa! Lo bien que lo paso al lado de esta persona no tiene comparación con nada. Ella me hace feliz, me saca una sonrisa. El saber que esta persona tiene el mismo aprecio que yo tengo por ella es hermoso, es impresionante. Ella me ha demostrado cosas que casi nadie hace, ella me cambió mi personalidad, la forma de ver las cosas y sigue estando para mí. Por si ves esto, te quiero.
-            En la vida se pasa de todo, solo hay que saber cómo afrontar las cosas y con la ayuda de Dios créanme que todo es posible :) 
-            </p>
+        <h1>BIOGRAFÍA</h1>
+        <div class="timeline">
+            <div class="event">
+                <span class="date">Infancia</span>
+                <img src="bebe.jpg" alt="Infancia">
+                <p>Claramente no recuerdo nada de mi infancia, solo que me encantaba ver las aventuras de Billy y Mandy. Mi mamá y mi abuela me cuentan que desde pequeño ya venían mis ganas de hacer ejercicio, ya que me cuentan que de pequeño me agarraban de la cintura y yo me ponía a saltar donde sea que estuviera.</p>
+            </div>
+
+            <div class="event">
+                <span class="date">Niñez</span>
+                <img src="dereckhector.jpg" alt="Niñez">
+                <p>Casi todas las personas tienen conciencia ya a estas edades, pero yo no recuerdo casi nada. Cuando tenía casi 4 años, mataron a mi padre biológico Aroldo Castañeda, quien no tomó las mejores decisiones. En todos mis años de estudio fui abanderado hasta 1ero básico. Me mantenía más tiempo con mi abuela y mi tía porque mi mamá trabajaba y no tenía tiempo para mí. Mi tía cuenta que nunca comía y me gastaba mi dinero en cartas de Pokémon.</p>
+            </div>
+
+            <div class="event">
+                <span class="date">Adolescencia</span>
+                <img src="ruta/a/tu/imagen3.jpg" alt="Adolescencia">
+                <p>(NO TENGO FOTOS) Esta claramente ya tenía conciencia y sinceramente esta parte de mi vida fue la peor. No tenía autoestima, me dejaba de todas las personas y siempre fui la burla de todos. Nunca me defendí porque sentía que era hacer las cosas mal y yo solo quería hacer sentir bien a todo el mundo. La humildad siempre estuvo, está y estará en mí, pero en esas etapas de mi vida fue lo peor. Tuve malas experiencias de todo: amistades, familiar y sentimental, pero no me arrepiento de nada porque gracias a eso soy quien soy. Pero fue horrible, jamás volvería a esta edad. "GORDO", "FEO", "DEFORME"...</p>
+            </div>
+
+            <div class="event">
+                <span class="date">Juventud</span>
+                <img src="yoXD3.jpg" alt="Juventud">
+                <p>Pasó mucho tiempo para darme cuenta de que soy una persona agradecida de todo lo que pasó en esta vida. Si no fuera por eso, no sería quien soy y no pensaría con la misma claridad que tengo ahora. He pasado muchas cosas, tanto buenas como malas, pero lo bueno se queda y lo malo solo se toma como "experiencia". Entré al gym, podría decir que llevo 1 año, ya dejé algunos meses pero mi progreso no se echó a perder. Sé que puedo mejorar, claramente tengo que hacerlo, tengo que superarme. Conocí a muchas personas en la vida y sé quiénes puedo llamar "amigos". Dereck Medina, mi mejor amigo desde que tengo aproximadamente 5 años, pasamos de todo juntos pero es alguien que siempre estará para mí. Todo lo pasamos juntos y como siempre nos confunden "¿ustedes son hermanos?".
+                Steven Zepeda, una persona que recién conocí el año pasado pero es mi hermano de verdad. Nunca había conocido a alguien tan parecido y no en aspectos físicos. El poco tiempo que ha pasado junto a mí me ha demostrado que es alguien que jamás me fallará. Se la pasa aconsejándome, apoyándome y dándome motivación en el gym. Te quiero mi hermanote. Hay muchísimas personas que llevo en mi corazón: Cristian Cuellar, Héctor Galicia, Alejandro, Alexis, Adrián, todos son muy especiales, también como mis amigos actuales Hanssel, Dwight y Jonathan.
+                Tuve una mala experiencia con una persona en plan "amoroso" pero eso no era amor, y eso me quitó los ánimos o las ganas de conocer a alguien más.
+                </p>
+            </div>
+
+            <!-- Nueva sección sobre tu novia -->
+            <div class="event">
+                <span class="date">Relación Actual</span>
+                <img src="MIMUJER.jpg" alt="Relación Actual">
+                <p>Conocí a Sara Guerra, la que actualmente es mi pareja sentimental. Sé que muchas personas pueden decir "el amor solo es una pérdida de tiempo", si es así, ¡qué pérdida de tiempo tan hermosa! Lo bien que lo paso al lado de esta persona no tiene comparación con nada. Ella me hace feliz, me saca una sonrisa. El saber que esta persona tiene el mismo aprecio que yo tengo por ella es hermoso, es impresionante. Ella me ha demostrado cosas que casi nadie hace, ella me cambió mi personalidad, la forma de ver las cosas y sigue estando para mí, jamás encontraré a otra persona como ella. Te adoro, mi niña.</p>
+                <p>Gracias a Dios, yo tengo como meta con ella el hablar con sus padres para formalizar lo nuestro y cumplir nuestros sueños/metas. Su madre ya me conoce, solo me falta su papá jijiji. Lo quiero todo con ella.</p>
+            </div>
         </div>
     </div>
-
 </body>
 </html>

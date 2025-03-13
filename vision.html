@@ -10,59 +10,94 @@
             font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-            background-image: url('vango.jpg');
-            font-weight: 700;
-            overflow-y: auto; /* Agrega una barra de desplazamiento vertical */
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Asegura que la imagen de fondo cubra toda la altura de la ventana */
+            width: 100vw; /* Asegura que la imagen de fondo cubra todo el ancho de la ventana */
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             text-align: center;
             opacity: 0.9;
             overflow-y: auto; /* Asegura que el contenido interno sea desplazable */
             max-height: 90vh; /* Limita la altura máxima del contenedor */
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+        }
+        .container:hover {
+            transform: translateY(-10px); /* Eleva la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
         }
         h1 {
-            color: #000000;
+            color: #ece57c; /* Color amarillo */
             font-weight: 700;
+            font-size: 4em; /* Tamaño de fuente más grande */
+            margin-top: 20px;
+            text-align: center; /* Centra el título */
         }
         h2 {
             color: #000000;
             margin-top: 20px;
             font-weight: 700;
+            font-size: 1.2em; /* Tamaño de fuente más pequeño */
         }
         p {
             color: #000000;
             text-align: justify;
             font-weight: 700;
+            font-size: 1em; /* Tamaño de fuente más pequeño */
         }
-        ol {
+        .components {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .component {
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33% - 20px); /* Tres columnas con espacio entre ellas */
+            max-width: calc(33% - 20px);
             text-align: left;
-            margin: 0 auto;
-            max-width: 500px;
-            list-style-type: decimal;
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+        }
+        .component:hover {
+            transform: scale(1.05); /* Aumenta el tamaño de la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
         }
     </style>
 </head>
 <body>
+    <h1>VISIÓN</h1>
     <div class="container">
-        <h1>Visión</h1>
         <h2>Tener un trabajo desde mi casa para poder pasar tiempo con mi familia y estar feliz. Adquirir experiencia y títulos mediante cursos externos para destacar y apoyar a mi familia. Estar bien conmigo mismo y con la persona que esté conmigo.</h2>
-        <h1>Componentes de mi Visión Personal</h1>
-        <h2>
-            <ol>Trabajo Remoto:
-                <p>Desarrollar una carrera exitosa que me permita trabajar desde casa, garantizando así que pueda pasar tiempo de calidad con mi familia.</p> </ol>
-            <ol>Desarrollo Profesional: 
-                <p>Obtener experiencia y títulos mediante cursos externos para destacar en mi campo profesional y apoyar a mi familia.</p></ol>
-            <ol>Bienestar Personal: 
-                <p>Mantener un equilibrio emocional y físico que me permita estar bien conmigo mismo y con la persona que esté a mi lado.</p></ol>
-        </h2>
+    </div>
+    <h1>Componentes de mi Visión Personal</h1>
+    <div class="components">
+        <div class="component">
+            <h2>Trabajo Remoto</h2>
+            <p>Desarrollar una carrera exitosa que me permita trabajar desde casa, garantizando así que pueda pasar tiempo de calidad con mi familia.</p>
+        </div>
+        <div class="component">
+            <h2>Desarrollo Profesional</h2>
+            <p>Obtener experiencia y títulos mediante cursos externos para destacar en mi campo profesional y apoyar a mi familia.</p>
+        </div>
+        <div class="component">
+            <h2>Bienestar Personal</h2>
+            <p>Mantener un equilibrio emocional y físico que me permita estar bien conmigo mismo y con la persona que esté a mi lado.</p>
+        </div>
     </div>
 </body>
 </html>

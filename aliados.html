@@ -10,9 +10,10 @@
             font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
-            background-image: url('vango.jpg');
             font-weight: 700;
             position: relative; 
             overflow-y: auto; /* Agrega una barra de desplazamiento vertical */
@@ -21,16 +22,26 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: transparent; /* Fondo transparente */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             opacity: 0.9;
             overflow-y: auto; /* Asegura que el contenido interno sea desplazable */
             max-height: 90vh; /* Limita la altura máxima del contenedor */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        h1, h2 {
+        h1 {
+            color: #ece57c;
+            font-weight: 900;
+            font-size: 5em;
+            grid-column: span 2;
+        }
+        h2 {
             color: #000000;
             font-weight: 700;
+            margin-top: 0;
         }
         p {
             color: #000000;
@@ -51,44 +62,101 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .section {
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+        }
+        .section:hover {
+            transform: translateY(-10px); /* Eleva la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Aliados</h1>
+        <h1>ALIADOS</h1>
         
-        <h2><strong>Laboral</strong></h2>
-        <li>Mi Padre</li>
-        <li>Mi Madre</li>
-        <li>Mis Tíos</li>
-        <h2><strong>Académico</strong></h2>
-        <li>Mis Padres</li>
-        <li>Mis Maestros</li>
-        <li>Mis Amigos</li>
-        <h2>Espiritual</h2>
-        <li>Dios</li>
-        <li>Mi Familia</li>
-        <li>Mi Mejor Amigo</li>
-        <h2>Físico</h2>
-        <li>Dios</li>
-        <li>Mis Gym Bros</li>
-        <li>Mi Familia</li>
-        <h2>Familiar</h2>
-        <li>Mi Madre</li>
-        <li>Mi Tía</li>
-        <li>Mi Padrastro</li>
-        <h2>Emocional</h2>
-        <li>Dios</li>
-        <li>Mi Pareja Sentimental</li>
-        <li>Mis Amigos</li>
-        <h2>Social</h2>
-        <li>Mi Pareja Sentimental</li>
-        <li>Mis Gym Bros</li>
-        <li>Mis Amigos</li>
-        <h2>Económico</h2>
-        <li>Mi Madre</li>
-        <li>Mi Tía</li>
-        <li>Mi Abuela</li>
+        <div class="section">
+            <h2><strong>Laboral</strong></h2>
+            <ul>
+                <li>Mi Padre</li>
+                <li>Mi Madre</li>
+                <li>Mis Tíos</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><strong>Académico</strong></h2>
+            <ul>
+                <li>Mis Padres</li>
+                <li>Mis Maestros</li>
+                <li>Mis Amigos</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><strong>Espiritual</strong></h2>
+            <ul>
+                <li>Dios</li>
+                <li>Mi Familia</li>
+                <li>Mi Mejor Amigo</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><strong>Físico</strong></h2>
+            <ul>
+                <li>Dios</li>
+                <li>Mis Gym Bros</li>
+                <li>Mi Familia</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><strong>Familiar</strong></h2>
+            <ul>
+                <li>Mi Madre</li>
+                <li>Mi Tía</li>
+                <li>Mi Padrastro</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><strong>Emocional</strong></h2>
+            <ul>
+                <li>Dios</li>
+                <li>Mi Pareja Sentimental</li>
+                <li>Mis Amigos</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><strong>Social</strong></h2>
+            <ul>
+                <li>Mi Pareja Sentimental</li>
+                <li>Mis Gym Bros</li>
+                <li>Mis Amigos</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><strong>Económico</strong></h2>
+            <ul>
+                <li>Mi Madre</li>
+                <li>Mi Tía</li>
+                <li>Mi Abuela</li>
+            </ul>
+        </div>
     </div>
     
     <div class="photo-gallery">

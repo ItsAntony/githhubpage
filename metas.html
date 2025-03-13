@@ -10,9 +10,11 @@
             font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
-            background-image: url('vango.jpg');
             font-weight: 700;
             overflow-y: auto; /* Agrega una barra de desplazamiento vertical */
         }
@@ -20,21 +22,56 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            text-align: center;
             opacity: 0.9;
             overflow-y: auto; /* Asegura que el contenido interno sea desplazable */
             max-height: 90vh; /* Limita la altura máxima del contenedor */
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
         }
-        h1, h2 {
-            color: #000000;
+        .container:hover {
+            transform: translateY(-10px); /* Eleva la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
+        }
+        h1 {
+            color: #ece57c; /* Color amarillo */
             font-weight: 700;
+            font-size: 4em; /* Tamaño de fuente más grande */
+            margin-top: 20px;
+        }
+        h2 {
+            color: #000000;
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 1.2em; /* Tamaño de fuente más pequeño */
         }
         p {
             color: #000000;
             text-align: justify;
             font-weight: 700;
+            font-size: 1em; /* Tamaño de fuente más pequeño */
+        }
+        .components {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .component {
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33% - 20px); /* Tres columnas con espacio entre ellas */
+            max-width: calc(33% - 20px);
+            text-align: left;
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+        }
+        .component:hover {
+            transform: scale(1.05); /* Aumenta el tamaño de la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
         }
         ol {
             text-align: left;
@@ -45,111 +82,118 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Metas</h1>
-        
-        <h2>Metas Académicas</h2>
-        <h3>Corto Plazo</h3>
-        <ol>
-            <li>Completar los cursos de programación actuales.</li>
-            <li>Inscribirme en un curso de inglés básico.</li>
-        </ol>
-        <h3>Mediano Plazo</h3>
-        <ol>
-            <li>Avanzar en los cursos de programación a un nivel intermedio.</li>
-            <li>Completar un curso de inglés intermedio.</li>
-        </ol>
-        <h3>Largo Plazo</h3>
-        <ol>
-            <li>Graduarme de la universidad con una carrera en tecnología.</li>
-            <li>Obtener certificaciones avanzadas en programación.</li>
-            <li>Alcanzar un nivel avanzado de inglés.</li>
-        </ol>
-
-        <h2>Metas Espirituales</h2>
-        <h3>Corto Plazo</h3>
-        <ol>
-            <li>Dedicar tiempo diario a la oración y lectura de la Biblia.</li>
-        </ol>
-        <h3>Mediano Plazo</h3>
-        <ol>
-            <li>Participar activamente en actividades de la iglesia.</li>
-        </ol>
-        <h3>Largo Plazo</h3>
-        <ol>
-            <li>Fortalecer mi relación con Dios y vivir de acuerdo a sus enseñanzas.</li>
-        </ol>
-
-        <h2>Metas Profesionales</h2>
-        <h3>Corto Plazo</h3>
-        <ol>
-            <li>Aprender nuevas tecnologías de programación.</li>
-            <li>Mejorar mi nivel de inglés técnico.</li>
-        </ol>
-        <h3>Mediano Plazo</h3>
-        <ol>
-            <li>Aplicar los conocimientos adquiridos en proyectos reales.</li>
-        </ol>
-        <h3>Largo Plazo</h3>
-        <ol>
-            <li>Convertirme en un experto en mi campo profesional.</li>
-        </ol>
-
-        <h2>Metas Económicas</h2>
-        <h3>Corto Plazo</h3>
-        <ol>
-            <li>Conseguir un trabajo de medio tiempo mientras estudio.</li>
-        </ol>
-        <h3>Mediano Plazo</h3>
-        <ol>
-            <li>Ahorrar dinero para futuros proyectos y necesidades.</li>
-        </ol>
-        <h3>Largo Plazo</h3>
-        <ol>
-            <li>Escalar profesionalmente con mis cursos y títulos.</li>
-        </ol>
-
-        <h2>Metas Familiares</h2>
-        <h3>Corto Plazo</h3>
-        <ol>
-            <li>Dedicar tiempo de calidad a mi familia.</li>
-        </ol>
-        <h3>Mediano Plazo</h3>
-        <ol>
-            <li>Mejorar la comunicación y resolver conflictos familiares.</li>
-        </ol>
-        <h3>Largo Plazo</h3>
-        <ol>
-            <li>Fortalecer los lazos familiares y mantener una relación armoniosa.</li>
-        </ol>
-
-        <h2>Metas Emocionales</h2>
-        <h3>Corto Plazo</h3>
-        <ol>
-            <li>Practicar técnicas de manejo del estrés.</li>
-        </ol>
-        <h3>Mediano Plazo</h3>
-        <ol>
-            <li>Buscar apoyo emocional cuando sea necesario.</li>
-        </ol>
-        <h3>Largo Plazo</h3>
-        <ol>
-            <li>Lograr un balance emocional y mantener una relación sentimental saludable.</li>
-        </ol>
-
-        <h2>Metas Físicas</h2>
-        <h3>Corto Plazo</h3>
-        <ol>
-            <li>Establecer una rutina regular de ejercicios en el gimnasio.</li>
-        </ol>
-        <h3>Mediano Plazo</h3>
-        <ol>
-            <li>Mejorar mi condición física y resistencia.</li>
-        </ol>
-        <h3>Largo Plazo</h3>
-        <ol>
-            <li>Alcanzar mi físico deseado y mantener un estilo de vida saludable.</li>
-        </ol>
+    <h1>METAS</h1>
+    <div class="components">
+        <div class="component">
+            <h2>Metas Académicas</h2>
+            <h3>Corto Plazo</h3>
+            <ol>
+                <li>Completar los cursos de programación actuales.</li>
+                <li>Inscribirme en un curso de inglés básico.</li>
+            </ol>
+            <h3>Mediano Plazo</h3>
+            <ol>
+                <li>Avanzar en los cursos de programación a un nivel intermedio.</li>
+                <li>Completar un curso de inglés intermedio.</li>
+            </ol>
+            <h3>Largo Plazo</h3>
+            <ol>
+                <li>Graduarme de la universidad con una carrera en tecnología.</li>
+                <li>Obtener certificaciones avanzadas en programación.</li>
+                <li>Alcanzar un nivel avanzado de inglés.</li>
+            </ol>
+        </div>
+        <div class="component">
+            <h2>Metas Espirituales</h2>
+            <h3>Corto Plazo</h3>
+            <ol>
+                <li>Dedicar tiempo diario a la oración y lectura de la Biblia.</li>
+            </ol>
+            <h3>Mediano Plazo</h3>
+            <ol>
+                <li>Participar activamente en actividades de la iglesia.</li>
+            </ol>
+            <h3>Largo Plazo</h3>
+            <ol>
+                <li>Fortalecer mi relación con Dios y vivir de acuerdo a sus enseñanzas.</li>
+            </ol>
+        </div>
+        <div class="component">
+            <h2>Metas Profesionales</h2>
+            <h3>Corto Plazo</h3>
+            <ol>
+                <li>Aprender nuevas tecnologías de programación.</li>
+                <li>Mejorar mi nivel de inglés técnico.</li>
+            </ol>
+            <h3>Mediano Plazo</h3>
+            <ol>
+                <li>Aplicar los conocimientos adquiridos en proyectos reales.</li>
+            </ol>
+            <h3>Largo Plazo</h3>
+            <ol>
+                <li>Convertirme en un experto en mi campo profesional.</li>
+            </ol>
+        </div>
+        <div class="component">
+            <h2>Metas Económicas</h2>
+            <h3>Corto Plazo</h3>
+            <ol>
+                <li>Conseguir un trabajo de medio tiempo mientras estudio.</li>
+            </ol>
+            <h3>Mediano Plazo</h3>
+            <ol>
+                <li>Ahorrar dinero para futuros proyectos y necesidades.</li>
+            </ol>
+            <h3>Largo Plazo</h3>
+            <ol>
+                <li>Escalar profesionalmente con mis cursos y títulos.</li>
+            </ol>
+        </div>
+        <div class="component">
+            <h2>Metas Familiares</h2>
+            <h3>Corto Plazo</h3>
+            <ol>
+                <li>Dedicar tiempo de calidad a mi familia.</li>
+            </ol>
+            <h3>Mediano Plazo</h3>
+            <ol>
+                <li>Mejorar la comunicación y resolver conflictos familiares.</li>
+            </ol>
+            <h3>Largo Plazo</h3>
+            <ol>
+                <li>Fortalecer los lazos familiares y mantener una relación armoniosa.</li>
+            </ol>
+        </div>
+        <div class="component">
+            <h2>Metas Emocionales</h2>
+            <h3>Corto Plazo</h3>
+            <ol>
+                <li>Practicar técnicas de manejo del estrés.</li>
+            </ol>
+            <h3>Mediano Plazo</h3>
+            <ol>
+                <li>Buscar apoyo emocional cuando sea necesario.</li>
+            </ol>
+            <h3>Largo Plazo</h3>
+            <ol>
+                <li>Lograr un balance emocional y mantener una relación sentimental saludable.</li>
+            </ol>
+        </div>
+        <div class="component">
+            <h2>Metas Físicas</h2>
+            <h3>Corto Plazo</h3>
+            <ol>
+                <li>Establecer una rutina regular de ejercicios en el gimnasio.</li>
+            </ol>
+            <h3>Mediano Plazo</h3>
+            <ol>
+                <li>Mejorar mi condición física y resistencia.</li>
+            </ol>
+            <h3>Largo Plazo</h3>
+            <ol>
+                <li>Alcanzar mi físico deseado y mantener un estilo de vida saludable.</li>
+            </ol>
+        </div>
     </div>
 </body>
 </html>

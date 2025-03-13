@@ -10,62 +10,100 @@
             font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Asegura que la imagen de fondo cubra toda la altura de la ventana */
             text-align: center;
-            background-image: url('vango.jpg');
             font-weight: 700;
+            overflow-y: auto; /* Agrega una barra de desplazamiento vertical */
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            text-align: center;
             opacity: 0.9;
+            overflow-y: auto; /* Asegura que el contenido interno sea desplazable */
+            max-height: 90vh; /* Limita la altura máxima del contenedor */
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
         }
-        h1, h2 {
-            color: #000000;
+        .container:hover {
+            transform: translateY(-10px); /* Eleva la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
+        }
+        h1 {
+            color: #ece57c; /* Color amarillo */
             font-weight: 700;
+            font-size: 4em; /* Tamaño de fuente más grande */
+            margin-top: 20px;
+        }
+        h2 {
+            color: #000000;
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 1.2em; /* Tamaño de fuente más pequeño */
         }
         p {
             color: #000000;
             text-align: justify;
             font-weight: 700;
+            font-size: 1em; /* Tamaño de fuente más pequeño */
         }
-        ol {
+        .components {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .component {
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33% - 20px); /* Tres columnas con espacio entre ellas */
+            max-width: calc(33% - 20px);
             text-align: left;
-            margin: 0 auto;
-            max-width: 500px;
-            list-style-type: decimal;
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+        }
+        .component:hover {
+            transform: scale(1.05); /* Aumenta el tamaño de la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Estrategias</h1>
-        
-        <h2><strong>1. Estrategias a Corto Plazo</strong></h2>
-        <ol>
-            <li>Completar un curso en línea sobre programación.</li>
-            <li>Leer un libro sobre desarrollo personal cada mes.</li>
-            <li>Establecer una rutina diaria de ejercicio físico.</li>
-        </ol>
-        
-        <h2>2. Estrategias a Medio Plazo</h2>
-        <ol>
-            <li>Obtener una certificación en programación.</li>
-            <li>Participar en proyectos de código abierto para ganar experiencia.</li>
-            <li>Ahorrar un porcentaje de mis ingresos mensuales para invertir en mi educación.</li>
-        </ol>
-
-        <h2>3. Estrategias a Largo Plazo</h2>
-        <ol>
-            <li>Conseguir un empleo en una empresa de tecnología reconocida.</li>
-            <li>Desarrollar y apoyar en páginas o aplicaciones famosas.</li>
-            <li>Continuar mi educación con una maestría en ciencias de la computación.</li>
-        </ol>
-        
+    <h1>ESTRATEGIAS</h1>
+    <div class="components">
+        <div class="component">
+            <h2>Emocional</h2>
+            <p>• Evitar cualquier cosa o persona que me pueda hacer sentir mal.</p>
+        </div>
+        <div class="component">
+            <h2>Académico</h2>
+            <p>• Siempre poner atención en mis clases y hacer todas mis tareas a conciencia.</p>
+        </div>
+        <div class="component">
+            <h2>Físico</h2>
+            <p>• Empezar a controlar las calorías que consumo y cuidarme mejor de las grasas.</p>
+        </div>
+        <div class="component">
+            <h2>Económico</h2>
+            <p>• No gastar en cosas innecesarias y ahorrar.</p>
+        </div>
+        <div class="component">
+            <h2>Social</h2>
+            <p>• Tratar de convivir más con personas con las que no me llevo tanto y salir más.</p>
+        </div>
+        <div class="component">
+            <h2>Familiar</h2>
+            <p>• Intentar no pelearme con ellos por más que tenga motivos.</p>
+        </div>
     </div>
 </body>
 </html>

@@ -10,9 +10,11 @@
             font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
-            background-image: url('vango.jpg');
             font-weight: 700;
             overflow-y: auto; /* Agrega una barra de desplazamiento vertical */
         }
@@ -20,17 +22,28 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: transparent; /* Fondo transparente */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             opacity: 0.9;
             overflow-y: auto; /* Asegura que el contenido interno sea desplazable */
             max-height: 90vh; /* Limita la altura máxima del contenedor */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        h1, h2, h3 {
+        h1 {
+            color: #ece57c; /* Color amarillo similar al título del archivo index.html */
+            text-align: center;
+            font-weight: 700;
+            font-size: 3em; /* Tamaño de fuente más grande */
+            grid-column: span 2;
+        }
+        h2, h3 {
             color: #000000;
             text-align: center;
             font-weight: 700;
+            grid-column: span 2;
         }
         p {
             color: #000000;
@@ -43,38 +56,59 @@
             max-width: 500px;
             list-style-type: decimal;
         }
+        .section {
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+        }
+        .section:hover {
+            transform: translateY(-10px); /* Eleva la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Mi Personalidad</h1>
+        <h1>MI PERSONALIDAD</h1>
         
-        <h2><strong>1. Rasgos de Personalidad</strong></h2>
-        <p>
-            <h3>Positivas</h3>
-            Soy un chico extrovertido, una persona sincera, amable, humilde con todas las personas que me rodean, soy una persona que demuestra su amor y cariño hacia los demás, tengo una personalidad bastante chistosa y me gusta llevarme bien con todos, soy muy cariñoso con mi mujer.
-            <h3>Negativas</h3>
-            Como cosas negativas que puedo ver en mí es que soy una persona que es demasiado sensible a palabras pesadas.
-            <p>Creo que soy una persona que se deja dominar por mis emociones y a veces puedo actuar de diferente forma por mis emociones.</p>
-        </p>
-        
-        <h2>2. Fortalezas</h2>
-        <p>Puedo tener bastantes fortalezas por mi forma de pensar, algunas podrían ser como:
-            <ol>1. Empatía</ol>
-            <ol>2. Disciplina</ol>
-            <ol>3. Inteligencia emocional</ol>
-            <ol>4. Liderazgo</ol>
-            <ol>5. Resiliencia</ol>
-        </p>
-        
-        <h2>3. Áreas de Mejora</h2>
-        <p>Me gustaría mejorar mi paciencia, mi responsabilidad ya que no es la mejor pero tampoco la peor, mi atención.</p>
-        
-        <h2>4. Cómo me ven los demás</h2>
-        <p>Depende de la persona porque dependiendo de quién es para mí es como yo me comporto, en mi familia todos pueden decir que soy un egocéntrico y antisocial, con mis amigos pueden decir que soy una persona fuerte ante los problemas y que soy una persona que está para apoyar, mi pareja sentimental dice que me ve perfecto pero a veces creo que puedo mejorar en algunos aspectos para poder ser mejor con ella y que en ningún momento se sienta mal, pero ella puede decir que soy algo "fuerte", alegre, baboso, amoroso.</p>
-        
-        <h2>5. Mis emociones y cómo las manejo</h2>
-        <p>Creo que soy un chico el cual puede manejar bien sus emociones ya que actúo de la mejor manera tanto para mi persona como para los demás si la situación lo amerita.</p>
+        <div class="section">
+            <h2><strong>1. Rasgos de Personalidad</strong></h2>
+            <p>
+                <h3>Positivas</h3>
+                Soy un chico extrovertido, una persona sincera, amable, humilde con todas las personas que me rodean, soy una persona que demuestra su amor y cariño hacia los demás, tengo una personalidad bastante chistosa y me gusta llevarme bien con todos, soy muy cariñoso con mi mujer.
+                <h3>Negativas</h3>
+                Como cosas negativas que puedo ver en mí es que soy una persona que es demasiado sensible a palabras pesadas.
+                <p>Creo que soy una persona que se deja dominar por mis emociones y a veces puedo actuar de diferente forma por mis emociones.</p>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>2. Fortalezas</h2>
+            <p>Puedo tener bastantes fortalezas por mi forma de pensar, algunas podrían ser como:
+                <li>Empatía</li>
+                <li>Disciplina</li>
+                <li>Inteligencia emocional</li>
+                <li>Liderazgo</li>
+                <li>Resiliencia</li>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>3. Áreas de Mejora</h2>
+            <p>Me gustaría mejorar mi paciencia, mi responsabilidad ya que no es la mejor pero tampoco la peor, mi atención.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Cómo me ven los demás</h2>
+            <p>Depende de la persona porque dependiendo de quién es para mí es como yo me comporto, en mi familia todos pueden decir que soy un egocéntrico y antisocial, con mis amigos pueden decir que soy una persona fuerte ante los problemas y que soy una persona que está para apoyar, mi pareja sentimental dice que me ve perfecto pero a veces creo que puedo mejorar en algunos aspectos para poder ser mejor con ella y que en ningún momento se sienta mal, pero ella puede decir que soy algo "fuerte", alegre, baboso, amoroso.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Mis emociones y cómo las manejo</h2>
+            <p>Creo que soy un chico el cual puede manejar bien sus emociones ya que actúo de la mejor manera tanto para mi persona como para los demás si la situación lo amerita.</p>
+        </div>
     </div>
 </body>
 </html>

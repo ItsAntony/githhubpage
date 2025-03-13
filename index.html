@@ -6,25 +6,21 @@
     <title>Mi Proyecto</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <style> 
-
         body {
-           font-family: 'Outfit', Arial, sans-serif;
+            font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
-    padding: 0;
-    background-color: transparent;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh; 
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-         }
-
-
-
+            padding: 0;
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; 
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
         .sidebar { 
             width: 250px;
             overflow-y: auto; 
@@ -35,13 +31,14 @@
         .content {
             flex-grow: 1;
             padding: 20px;
+            text-align: center;
         }
         h1.titulo { 
             text-align: center;
             font-size: 5em;
             margin-bottom: 20px;
             color: #ece57c;
-            border-color:rgb(3, 3, 3); 
+            border-color: rgb(3, 3, 3); 
         }
         nav {
             background: transparent;
@@ -72,16 +69,55 @@
             transform: translate(0);
             box-shadow: none;
         }
-        
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Ajusta el tamaño según sea necesario */
+            height: auto;
+        }
+        .profile-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .profile-section h1 {
+            color: #ece57c;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .profile-section p {
+            color: #ece57c;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+        .caratula-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .caratula-section h1 {
+            color: #ece57c;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .caratula-section p {
+            color: #ece57c;
+            font-size: 1.5em;
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
-    
-</div>
+    <img src="LCMwhite.png" alt="Logo del Colegio" class="logo"> <!-- Línea de código para agregar el logo -->
     <div class="content">
-        <h1 class="titulo"><strong>Proyecto de Vida</strong></h1>
+        <h1 class="titulo"><strong>PROYECTO DE VIDA</strong></h1>
         <nav>
-            <a href="caratula.html" class="button"><strong>Carátula</strong><br><small>Portada del proyecto</small></a>
             <a href="personalidad.html" class="button"><strong>Personalidad</strong><br><small>Características y rasgos personales</small></a>
             <a href="autorretrato.html" class="button"><strong>Autorretrato</strong><br><small>Descripción personal en primera persona</small></a>
             <a href="acrostico.html" class="button"><strong>Acróstico</strong><br><small>Poema o mensaje con mi nombre</small></a>
@@ -96,5 +132,17 @@
             <a href="conclusion.html" class="button"><strong>Conclusión</strong><br><small>Reflexión final sobre mi proyecto de vida</small></a>
             <a href="agradecimientos.html" class="button"><strong>Agradecimientos</strong><br><small>Reconocimiento a quienes me han apoyado</small></a>
         </nav>
+        <div class="profile-section">
+            <h1>Quién soy</h1>
+            <img src="YOXD2.jpg" alt="Foto de perfil">
+            <h1>Carlos Daniel Antony Romeo Castañeda Gonzalez</h1>
+            <p><strong>Edad:</strong> 17 Años</p>
+            <p><strong>Ocupación:</strong> Actualmente cursando el grado de 5to bachillerato en computación con orientación en científica, y siendo contador para la empresa de mis tíos.</p>
+            <p><strong>Sobre mí:</strong> Un hijo de Dios, una persona que le tocó vivir solo en varios aspectos, alguien que le gusta apoyar y escuchar a las personas, divertido y chistoso.</p>
+            <p><strong>Grado:</strong> 5to Bachillerato en Computación</p>
+            <p><strong>Materia:</strong> Proyecto de Vida</p>
+            <p><strong>Fecha:</strong> 12 de marzo de 2025</p>
+        </div>
     </div>
 </body>
+</html>

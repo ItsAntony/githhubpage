@@ -10,8 +10,10 @@
             font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            background-image: url('vango.jpg');
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
             display: flex;
             justify-content: center;
@@ -19,33 +21,37 @@
             height: 100vh;
         }
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 500px;
             text-align: center;
             opacity: 0.9;
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+        }
+        .container:hover {
+            transform: translateY(-10px); /* Eleva la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
         }
         h1 {
-            color: #333;
+            color: #ff6347; /* Color más vistoso para el título */
         }
         .acrostico span {
             font-size: 1.5em;
             font-weight: bold;
-            color: #ece57c;
+            color: #ff6347; /* Color más vistoso para las letras de los span */
             text-align: center;
         }
         p {
             color: #555;
-            text-align: left;
             text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Acróstico de ROMEO</h1>
+        <h1>ACRÓSTICO DE ROMEO</h1>
         <div class="acrostico">
             <p><span>R</span>espetuoso con los demás.</p>
             <p><span>O</span>ptimista, pero con los pies en la tierra.</p>

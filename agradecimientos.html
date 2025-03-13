@@ -10,40 +10,61 @@
             font-family: 'Outfit', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('vango.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Ajusta la altura mínima */
+            width: 100vw; /* Ajusta el ancho */
             text-align: center;
-            background-image: url('vango.jpg');
             font-weight: 700;
+            overflow-y: auto; /* Agrega una barra de desplazamiento vertical */
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            text-align: center;
             opacity: 0.9;
+            overflow-y: auto; /* Asegura que el contenido interno sea desplazable */
+            max-height: 90vh; /* Limita la altura máxima del contenedor */
+            transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
         }
-        h1, h2 {
-            color: #000000;
+        .container:hover {
+            transform: translateY(-10px); /* Eleva la sección */
+            background-color: rgba(255, 255, 255, 1); /* Cambia el fondo a completamente blanco */
+        }
+        h1 {
+            color: #ece57c; /* Color amarillo */
             font-weight: 700;
+            font-size: 4em; /* Tamaño de fuente más grande */
+            margin-top: 20px;
+        }
+        h2 {
+            color: #000000;
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 1.2em; /* Tamaño de fuente más pequeño */
         }
         p {
             color: #000000;
             text-align: justify;
             font-weight: 700;
+            font-size: 1em; /* Tamaño de fuente más pequeño */
         }
     </style>
 </head>
 <body>
+    <h1>AGRADECIMIENTOS</h1>
     <div class="container">
-        <h1>Agradecimientos</h1>
-        
-        <h2><strong>1. Agradecimientos especiales</strong></h2>
-        <p>Quiero expresar mi más sincero agradecimiento a las personas que han sido fundamentales en mi vida y en la realización de este proyecto:</p>
-        <p>A mi mamá, quien es la única que siempre me apoya incondicionalmente. Su amor y dedicación son mi mayor fuente de inspiración.</p>
-        <p>A mis amigos, por estar siempre a mi lado, brindándome su apoyo y compañía en los momentos buenos y malos.</p>
-        <p>A mi pareja sentimental, por su amor, comprensión y apoyo constante. Gracias por ser mi compañero/a en esta aventura llamada vida.</p>
+        <h2><strong>1. Reflexión final</strong></h2>
+        <p>Este proyecto de vida ha sido una oportunidad invaluable para reflexionar sobre mis metas, valores y aspiraciones. A través de los diferentes componentes, he podido identificar mis fortalezas y debilidades, así como las oportunidades y amenazas que pueden influir en mi camino. He establecido una visión clara de mi futuro, con objetivos específicos a corto, mediano y largo plazo en diversas áreas de mi vida, como lo son las académicas, profesionales, espirituales, familiares, emocionales y físicas.</p>
+        <p>La elaboración de este proyecto me ha permitido reconocer la importancia de contar con aliados y apoyos en mi vida, desde mi familia y amigos hasta mis mentores y compañeros de gimnasio. Además, he podido definir estrategias concretas para alcanzar mis metas y superar los obstáculos que puedan surgir.</p>
+        <p>En resumen, este proyecto de vida no solo me ha ayudado a organizar mis pensamientos y planes, sino que también me ha brindado una guía clara para seguir adelante con determinación y confianza. Estoy comprometido a trabajar arduamente para cumplir con cada uno de los objetivos que me he propuesto y a mantener una actitud positiva y resiliente ante los desafíos que se presenten.</p>
     </div>
 </body>
 </html>
